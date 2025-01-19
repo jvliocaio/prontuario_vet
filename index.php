@@ -1,3 +1,16 @@
+<?php
+
+require_once('config.php');
+
+$animalController = new AnimalController();
+$listaTodosAnimais = $animalController->listarTudo();
+
+for ($i=0; $i < count($listaTodosAnimais); $i++) { 
+    echo $listaTodosAnimais[$i]->nome."<br>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +20,7 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <section id="area-busca">
+    <!-- <section id="area-busca">
         <input type="text" placeholder="Informe nome do animal">
         <button>Buscar</button>
     </section>
@@ -78,6 +91,6 @@
 
 
 
-    </section>
+    </section> -->
 </body>
 </html>
